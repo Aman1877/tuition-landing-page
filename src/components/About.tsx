@@ -17,14 +17,26 @@ export default function About() {
         <p className="text-muted-foreground text-lg leading-relaxed">
           With over{" "}
           <span className="font-semibold text-primary">
-            15 years of experience
+            20 years of experience
           </span>{" "}
-          in personalized education, Mam has helped hundreds of students from
-          5th to 12th standard excel in their academics. She specializes in
-          <span className="font-medium"> Math</span>,{" "}
-          <span className="font-medium">Science</span>, and{" "}
-          <span className="font-medium">English</span>, blending modern teaching
-          methods with traditional discipline to nurture confident learners.
+          in personalized education, Ma'am has helped hundreds of students from
+          5th to 12th standard excel in their academics. She has{" "}
+          <span className="font-medium text-[#0f172a]">
+            completed her B.Com with distinction
+          </span>{" "}
+          and specializes in subjects like{" "}
+          <span className="font-medium">Maths</span>,{" "}
+          <span className="font-medium">Science</span>,{" "}
+          <span className="font-medium">Social Science</span>,{" "}
+          <span className="font-medium">English</span>,{" "}
+          <span className="font-medium">Gujarati</span>,{" "}
+          <span className="font-medium">Hindi</span>,{" "}
+          <span className="font-medium">Accountancy</span>,{" "}
+          <span className="font-medium">Statistics</span>,{" "}
+          <span className="font-medium">Economics</span>, and{" "}
+          <span className="font-medium">Business Organization</span>. She blends
+          modern teaching methods with traditional discipline to nurture
+          confident learners.
         </p>
       </motion.div>
     </section>

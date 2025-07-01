@@ -3,28 +3,40 @@ import { MessageSquare } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Ravi Sharma",
-    relation: "Parent of Class 8 Student",
+    name: "Zainab Mansuri",
+    relation: "12th Commerce",
     feedback:
-      "Mam helped my daughter gain confidence in Maths. Her concepts are now much stronger and she enjoys studying!",
+      "Mam's teaching style made Accountancy and Statistics so simple to understand. Her notes were life-saving before exams!",
   },
   {
-    name: "Anjali Mehta",
-    relation: "Class 10 Student",
+    name: "Fatima Mansuri",
+    relation: "10th Grade",
     feedback:
-      "The board prep classes were very useful. I improved my scores in Science and English. Highly recommended!",
+      "Science and Maths felt difficult at first, but now I’m confident and scoring well. Thank you, Mam!",
   },
   {
-    name: "Karan Patel",
-    relation: "Parent of Class 5 Student",
+    name: "Ziyan Mansuri",
+    relation: "11th Commerce",
     feedback:
-      "Very caring and disciplined teaching. My son actually looks forward to classes now.",
+      "Very friendly teaching environment. I never hesitate to ask questions now.",
   },
   {
-    name: "Sana Sheikh",
-    relation: "Class 12 Student",
+    name: "Faraz Shaikh",
+    relation: "10th Grade",
     feedback:
-      "Mam explains every topic so clearly. I cracked my finals confidently thanks to her tuition.",
+      "Mam explained all concepts with patience. Her revision sessions were very helpful for board prep.",
+  },
+  {
+    name: "Preeti",
+    relation: "10th Grade",
+    feedback:
+      "English and Grammar became my strong subjects thanks to her clear guidance.",
+  },
+  {
+    name: "Hifza Bootwala",
+    relation: "9th Grade",
+    feedback:
+      "From struggling with basics to topping class tests – all because of the personal attention Mam gave me.",
   },
 ];
 
@@ -46,26 +58,29 @@ export default function Testimonials() {
         </p>
       </motion.div>
 
-      <div className="grid gap-6 md:grid-cols-2">
+      {/* Horizontal scroll with scrollbar hidden using Tailwind */}
+      <div className="flex gap-4 overflow-x-auto px-1 pb-2 [-ms-overflow-style:'none'] [scrollbar-width:'none'] [&::-webkit-scrollbar]:hidden">
         {testimonials.map((item, index) => (
           <motion.div
             key={index}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.4, delay: index * 0.2 }}
-            className="rounded-2xl border border-[#e2e8f0] bg-white p-6 shadow-md hover:shadow-xl transition-all duration-300 ease-in-out hover:-translate-y-1"
+            transition={{ duration: 0.4, delay: index * 0.1 }}
+            className="min-w-[240px] max-w-[260px] flex-shrink-0 rounded-xl border border-[#e2e8f0] bg-white p-4 shadow-md hover:shadow-lg transition-all duration-300 ease-in-out hover:-translate-y-1"
           >
-            <div className="flex items-start gap-3 mb-4">
+            <div className="flex items-start gap-2 mb-3">
               <div className="p-2 bg-[#e0f2fe] rounded-full text-[#0ea5e9]">
                 <MessageSquare className="w-5 h-5" />
               </div>
               <div>
-                <p className="font-semibold text-gray-800">{item.name}</p>
-                <p className="text-sm text-gray-500">{item.relation}</p>
+                <p className="font-semibold text-sm text-gray-800">
+                  {item.name}
+                </p>
+                <p className="text-xs text-gray-500">{item.relation}</p>
               </div>
             </div>
-            <p className="text-gray-700 text-sm leading-relaxed italic">
+            <p className="text-gray-700 text-sm leading-snug italic">
               “{item.feedback}”
             </p>
           </motion.div>

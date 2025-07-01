@@ -1,10 +1,9 @@
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useScrollSection } from "@/context/ScrollContext";
-import { motion } from "framer-motion";
-import { Menu } from "lucide-react";
-import { useState } from "react";
 import clsx from "clsx";
-import { Home, Info, BookOpen, MessageSquare, Phone } from "lucide-react";
+import { motion } from "framer-motion";
+import { BookOpen, Home, Info, Menu, MessageSquare, Phone } from "lucide-react";
+import { useState } from "react";
 
 const links = [
   { label: "Home", href: "#home", icon: <Home className="w-5 h-5" /> },
@@ -43,9 +42,9 @@ export default function Navbar() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
         <a
           href="#home"
-          className="text-2xl font-bold tracking-wide text-indigo-700 hover:text-indigo-900 transition"
+          className="text-lg md:text-2xl font-bold tracking-wide text-indigo-700 hover:text-indigo-900 transition"
         >
-          Tution Classes
+          Sumaiya Tuition Classes
         </a>
 
         {/* Desktop Nav */}

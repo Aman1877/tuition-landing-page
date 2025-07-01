@@ -1,9 +1,10 @@
 import { motion } from "framer-motion";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 export default function Footer() {
   return (
     <motion.footer
-      className=" bg-background py-10 px-4 md:px-6"
+      className="bg-background py-10 px-4 md:px-6"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
@@ -43,12 +44,31 @@ export default function Footer() {
           </nav>
         </div>
 
-        {/* Column 3: Contact */}
-        <div className="space-y-2">
+        {/* Column 3: Contact with Icons */}
+        <div className="space-y-3">
           <h4 className="font-medium text-foreground">Contact</h4>
-          <p>Email: tuition@example.com</p>
-          <p>Phone: +91 98765 43210</p>
-          <p>Location: Ahmedabad, Gujarat</p>
+
+          <div className="flex items-start gap-2">
+            <Mail className="w-4 h-4 mt-1 text-gray-600" />
+            <a
+              href="mailto:sumaiya.tuition@gmail.com"
+              className="hover:underline"
+            >
+              sumaiya.tuition@gmail.com
+            </a>
+          </div>
+
+          <div className="flex items-start gap-2">
+            <Phone className="w-4 h-4 mt-1 text-gray-600" />
+            <a href="tel:+918000898815" className="hover:underline">
+              +91 80008 98815
+            </a>
+          </div>
+
+          <div className="flex items-start gap-2">
+            <MapPin className="w-4 h-4 mt-1 text-gray-600" />
+            <p>Dhalgarwad, Near Vegetable Market, Ahmedabad, Gujarat 380001</p>
+          </div>
         </div>
       </div>
 
