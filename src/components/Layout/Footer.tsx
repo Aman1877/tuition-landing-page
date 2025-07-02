@@ -54,7 +54,7 @@ export default function Footer() {
               href="mailto:sumaiya.tuition@gmail.com"
               className="hover:underline"
             >
-              sumaiya.tuition@gmail.com
+              tution54@gmail.com
             </a>
           </div>
 
