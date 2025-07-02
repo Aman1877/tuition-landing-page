@@ -54,25 +54,34 @@ export default function Classes() {
         </p>
       </motion.div>
 
-      {/* Subject Scrollable Row */}
-      <div className="overflow-x-auto whitespace-nowrap py-4 mb-12 scrollbar-hide">
-        <div className="flex space-x-4 px-2">
+      <div
+        className="overflow-x-auto py-4 mb-12 px-2"
+        style={{
+          scrollbarWidth: "none",
+          msOverflowStyle: "none",
+        }}
+      >
+        <div
+          className="flex space-x-4 whitespace-nowrap"
+          style={{ WebkitOverflowScrolling: "touch" }}
+        >
           {allSubjects.map((subject, index) => (
-            <motion.div
+            <div
               key={index}
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.05 }}
               className="inline-block bg-white rounded-xl border border-gray-300 shadow-sm px-5 py-3 text-sm font-medium text-gray-800 hover:shadow-md transition"
             >
               {subject}
-            </motion.div>
+            </div>
           ))}
         </div>
+
+        <style>{`
+          div::-webkit-scrollbar {
+            display: none;
+          }
+        `}</style>
       </div>
 
-      {/* Features Grid */}
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {features.map((feature, index) => (
           <motion.div

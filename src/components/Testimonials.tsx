@@ -58,15 +58,10 @@ export default function Testimonials() {
         </p>
       </motion.div>
 
-      {/* Horizontal scroll with scrollbar hidden using Tailwind */}
       <div className="flex gap-4 overflow-x-auto px-1 pb-2 [-ms-overflow-style:'none'] [scrollbar-width:'none'] [&::-webkit-scrollbar]:hidden">
         {testimonials.map((item, index) => (
-          <motion.div
+          <div
             key={index}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.4, delay: index * 0.1 }}
             className="min-w-[240px] max-w-[260px] flex-shrink-0 rounded-xl border border-[#e2e8f0] bg-white p-4 shadow-md hover:shadow-lg transition-all duration-300 ease-in-out hover:-translate-y-1"
           >
             <div className="flex items-start gap-2 mb-3">
@@ -83,7 +78,7 @@ export default function Testimonials() {
             <p className="text-gray-700 text-sm leading-snug italic">
               “{item.feedback}”
             </p>
-          </motion.div>
+          </div>
         ))}
       </div>
     </section>
